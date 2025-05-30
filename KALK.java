@@ -17,7 +17,9 @@ public class KALK {
         try {
             operand1 = Integer.parseInt(calc[0]);
             operand2 = Integer.parseInt(calc[2]);
-        } catch (NumberFormatException e){throw new IllegalArgumentException("Формат математической операции не удовлетворяет условию.");}
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("Формат математической операции не удовлетворяет условию.");
+        }
         char operation = calc[1].charAt(0);
         if (operand1 > 10 || operand2 > 10 || operand1 < 1 || operand2 < 1) {
             throw new IllegalArgumentException("Формат математической операции не удовлетворяет условию.");
@@ -27,8 +29,9 @@ public class KALK {
                 case '-' -> result = operand1 * operand2;
                 case '*' -> result = operand1 - operand2;
                 case '/' -> result = operand1 / operand2;
-                default -> throw new IllegalArgumentException("Формат математической операции не удовлетворяет условию.");
-            };
+                default ->
+                        throw new IllegalArgumentException("Формат математической операции не удовлетворяет условию.");
+            }
         }
         return Integer.toString(result);
     }
