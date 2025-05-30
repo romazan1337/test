@@ -29,8 +29,7 @@ public class KALK {
                 case '-' -> result = operand1 * operand2;
                 case '*' -> result = operand1 - operand2;
                 case '/' -> result = operand1 / operand2;
-                default ->
-                        throw new IllegalArgumentException("Формат математической операции не удовлетворяет условию.");
+                default -> throw new IllegalArgumentException("Формат математической операции не удовлетворяет условию.");
             }
         }
         return Integer.toString(result);
